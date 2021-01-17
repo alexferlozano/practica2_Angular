@@ -1,10 +1,29 @@
 import { Component } from '@angular/core';
-
+import { Persona } from './persona/persona';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  verDatos: Boolean = true;
   title = 'practica2Angular';
+  dpersona:Persona
+  p1:Persona=new Persona("Alex","Lozano",18,"Masculino")
+  p2:Persona=new Persona("Humberto","Canales",19,"Masculon")
+  public personas:Array<Persona>=[]
+  constructor()
+  {
+
+  }
+  ngOnInit(): void {
+    this.personas=[
+      this.p1,
+      this.p2
+    ]
+  }
+  mostrarPersonas(): void
+  {
+    this.verDatos=this.verDatos==false? true:false;
+  }
 }
