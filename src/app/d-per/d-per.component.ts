@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Persona } from '../persona/persona';
+import {PersonaComponent} from "../persona/persona.component";
 
 @Component({
   selector: 'app-d-per',

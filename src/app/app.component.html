@@ -5,26 +5,26 @@
     <td rowspan="2">
       <ul class="list-group">
         <div *ngIf="verDatos">
-          <app-persona [persona]='persona' *ngFor='let persona of personas'></app-persona>
+          <app-persona [persona]='persona' *ngFor='let persona of personas' (click)="onSelect(persona)"></app-persona>
         </div>
       </ul>
     </td>
     <td>
       <div [ngStyle]="{'visibility': ver ? 'visible':'hidden'}">
-      <app-d-per [dpersona]='p1'></app-d-per>
+              <app-d-per [dpersona]="dpersona"></app-d-per>
       </div>
     </td>
   </tr>
   <tr>
     <td>
-      <div class="form-check form-switch" (click)="mostrarPersonas()">
-        <input class="form-check-input" type="checkbox" id="lista_personas" checked />
+      <div class="form-check form-switch" >
+        <input class="form-check-input" type="checkbox" id="lista_personas" checked (click)="mostrarPersonas()"/>
         <label class="form-check-label" for="lista_personas"
           >Ver Lista de las personas</label>
       </div>
       <b></b>
-      <div class="form-check form-switch" (click)="mostrar()">
-        <input class="form-check-input" type="checkbox" id="datos_persona" checked/>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="datos_persona" checked (click)="mostrar()"/>
         <label class="form-check-label" for="datos_persona"
           >Ver Detalles de la persona</label>
       </div>

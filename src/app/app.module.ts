@@ -16,6 +16,9 @@ import { DPerComponent } from './d-per/d-per.component';
     BrowserModule,
     FormsModule
   ],
+  exports:[
+    PersonaComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

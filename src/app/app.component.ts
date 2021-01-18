@@ -12,6 +12,7 @@ export class AppComponent {
   dpersona:Persona
   p1:Persona=new Persona("Alex","Lozano",18,"Masculino")
   p2:Persona=new Persona("Humberto","Canales",19,"Masculon")
+  p3:Persona=new Persona("Jair","Alejandro",19,"Masculino")
   public personas:Array<Persona>=[]
   constructor()
   {
@@ -20,7 +21,8 @@ export class AppComponent {
   ngOnInit(): void {
     this.personas=[
       this.p1,
-      this.p2
+      this.p2,
+      this.p3
     ]
   }
   mostrarPersonas(): void
@@ -31,5 +33,9 @@ export class AppComponent {
   {
     this.ver=this.ver==false? true:false;
     console.log(this.ver)
+  }
+  onSelect(dpersona: Persona): void
+  {
+      this.dpersona=dpersona;
   }
 }
