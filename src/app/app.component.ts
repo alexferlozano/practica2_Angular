@@ -7,6 +7,7 @@ import { Persona } from './persona/persona';
 })
 export class AppComponent {
   verDatos: Boolean = true;
+  ver: Boolean= true;
   title = 'practica2Angular';
   dpersona:Persona
   p1:Persona=new Persona("Alex","Lozano",18,"Masculino")
@@ -25,5 +26,10 @@ export class AppComponent {
   mostrarPersonas(): void
   {
     this.verDatos=this.verDatos==false? true:false;
+  }
+  mostrar(): void
+  {
+    this.ver=this.ver==false? true:false;
+    console.log(this.ver)
   }
 }

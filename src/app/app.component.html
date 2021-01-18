@@ -10,9 +10,9 @@
       </ul>
     </td>
     <td>
-      <div>
-      <app-d-per [dpersona]="dpersona" (cambiarPer)="dpersona = $event"></app-d-per>
-    </div>
+      <div [ngStyle]="{'visibility': ver ? 'visible':'hidden'}">
+      <app-d-per [dpersona]='p1'></app-d-per>
+      </div>
     </td>
   </tr>
   <tr>
@@ -23,9 +23,9 @@
           >Ver Lista de las personas</label>
       </div>
       <b></b>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="datos_persona" />
-        <label class="form-check-label" for=""
+      <div class="form-check form-switch" (click)="mostrar()">
+        <input class="form-check-input" type="checkbox" id="datos_persona" checked/>
+        <label class="form-check-label" for="datos_persona"
           >Ver Detalles de la persona</label>
       </div>
     </td>
